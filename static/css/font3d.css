@@ -1,0 +1,24 @@
+body{
+    margin-top:5%;
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+}
+
+h1{
+    font-size: 180px;
+}
+
+#id_inputString{
+    font-size:40px;
+    font-family: 'Arial';
+}
+
+td{
+    text-align:left;
+}
+
+.navbar{
+    margin-left: 380px;
+    margin-right:380px;
+    width: 350px;
+}
