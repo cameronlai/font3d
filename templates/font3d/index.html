@@ -14,100 +14,83 @@
   <body>
     <div class="container text-center">
       <div class="row">
-      <h1 class="font-effect-shadow-multiple"> font3d </h1>
-      <form class="form-inline"  action="/font3d/" method="post">
-        {% csrf_token %}
-        {{ form.inputString }}
-        <button class="btn btn-large" type="submit" value="Submit"> Download STL File </button> 
-        <p> 
-          <font color="red">
-            {{ status }}
-          </font> 
-        </p>
-        </div>
-      <br>
-            <!-- Nav tabs -->
-            <nav class="navbar navbar-default" role="navigation">
-              <div class="container">
-              <ul class="nav navbar-nav">              
-              <li><a href="#settings" data-toggle="tab">
-                  Settings
-              </a></li>
-              <li class="active"><a href="#instructions" data-toggle="tab">
-                  Instructions
-              </a></li>
-              <li><a href="#about" data-toggle="tab">
-                  About
-              </a></li>
-            </ul>
-            </div>
-            </nav>
-            
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div class="tab-pane" id="settings">
-                {{ form.makeKeychain }} 
-                Add hole for keychain
-                <br><br>
-                Font: {{ form.fontType }}
-                <br><br>
-                    Default dimensions for a single character for different font are listed below:
-               <br><br>
-               {% for font,dimension in font_list.items %}
-               {{font}}: {{dimension}} <br>
-               {% endfor %}
-              </div>
-              <div class="tab-pane active" id="instructions">
-                <table class="table table-bordered table-striped">
-                  <thead>
-                    <tr>
-                      <th> Step 1 </th>
-                      <th> Step 2 </th>
-                      <th> Step 3 </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        Enter some text and download the STL file. 
-                        <br>
-                        <br>
-                        Currently, font3d is case insensitive and all text will outputted as upper case.
-                      </td>
-                      <td>
-                        Check the STL file and Slice with your favourite G Code processing tool <br>
-                        (e.g. 
-                        <a href="http://slic3r.org/" target="_blank"> Slic3r </a>, 
-                        <a href="http://wiki.ultimaker.com/Cura" target="_blank"> Cura </a>
-                        )
-                      </td>
-                      <td>
-                        Start your print with your 3D printer. If you don't have one yet, here's a few good choices. <br>
-                        (
-                        <a href="https://www.ultimaker.com/" target="_blank"> Ultimaker </a>, 
-                        <a href="http://cubify.com/" target="_blank"> Cubify </a>,
-                        <a href="http://www.makerbot.com/" target="_blank"> Makerbot </a>
-                        ) 
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="tab-pane" id="about">
-                font3d is a web app for you to generate a 3D model of text with any text that you inputted.
-                <br><br>
-                Give it a try and you'll love it
-                <br><br>
-                The backend of font3d is built with OpenSCAD and the source of the 3D characters are open source, 
-                <br> available at 
-                <a href="https://github.com/goldbug/font3d"> https://github.com/goldbug/font3d </a>
-              </div>
-            </div>
-      </form>
+	<h1 class="font-effect-shadow-multiple"> font3d </h1>
+	<form class="form-inline"  action="/" method="post">
+          {% csrf_token %}
+          {{ form.inputString }}
+          <button class="btn btn-large" type="submit" value="Submit"> Download STL File </button> 
+          <p> 
+            <font color="red">
+              {{ status }}
+            </font> 
+          </p>
       </div>
-      <hr>
-      Designed by <a href="http://cameronlai.com"> Cameron Lai </a>
-      <hr>
-    </body>
+      <br>
+      <!-- Nav tabs -->
+      <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav">              
+	  <li class="active"><a href="#instructions" data-toggle="tab">
+              Instructions
+	  </a></li>
+	  <li><a href="#about" data-toggle="tab">
+              About
+	  </a></li>
+        </ul>
+      </nav>
+      
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="instructions">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th> Step 1 </th>
+                <th> Step 2 </th>
+                <th> Step 3 </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Enter some text and download the STL file. 
+                  <br>
+                  <br>
+                  Currently, font3d is case insensitive and all text will outputted as upper case.
+                </td>
+                <td>
+                  Check the STL file and Slice with your favourite G Code processing tool <br>
+                  (e.g. 
+                  <a href="http://slic3r.org/" target="_blank"> Slic3r </a>, 
+                  <a href="http://wiki.ultimaker.com/Cura" target="_blank"> Cura </a>
+                  )
+                </td>
+                <td>
+                  Start your print with your 3D printer. If you don't have one yet, here's a few good choices. <br>
+                  (
+                  <a href="https://www.ultimaker.com/" target="_blank"> Ultimaker </a>, 
+                  <a href="http://cubify.com/" target="_blank"> Cubify </a>,
+                  <a href="http://www.makerbot.com/" target="_blank"> Makerbot </a>
+                  ) 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-pane" id="about">
+          font3d is a web app for you to generate a 3D model of text with any text that you inputted.
+          <br><br>
+          Give it a try and you'll love it
+          <br><br>
+          The backend of font3d is built with OpenSCAD and the source of the 3D characters are open source, 
+          <br> available at 
+          <a href="https://github.com/goldbug/font3d"> https://github.com/goldbug/font3d </a>
+        </div>
+      </div>
+      </form>
+    </div>
+    <hr>
+    Designed by <a href="http://cameronlai.com"> Cameron Lai </a>
+    <hr>
+  </body>
 </html>
 
