@@ -14,22 +14,6 @@
 *
 */
 
-include<dimension.scad>
-include<basic.scad>
+include<font3d.scad>
 
-module font3d(inputString, fontType)
-{
-	// Loop around characters
-	for (i=[0:len(inputString)-1])
-	{
-		// Pick corresponding font
-		translate([i*xdim,0,0])
-		if (fontType=="basic") basic(inputString[i]);
-		else
-		{
-		   echo("Font type not recognized");
-		}
-	}
-	// Add support bar
-	support_bar(len(inputString));
-}
+font3d("FONT3D", "basic");
