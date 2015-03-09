@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.template import Context, Template
 
 from models import inputForm
-from models import generate3D
+from models import font3dGenerator
 import re
 
 message = {
@@ -18,9 +18,9 @@ def index(request):
         form = inputForm(request.POST)
         if form.is_valid():
             inputString = form.cleaned_data['inputString']
-            if re.match('^[A-Za-z 1-9]*$', inputString):
-                g = generate3D()
-                return g.generate(inputString)
+            if re.match('^[A-Z 1-9]*$', inputString):
+                mFont3dGenerator = font3dGenerator()
+                return mFont3dGenerator.generate(inputString)
             else:
                 indexContext['status'] = message['fail']
     form = inputForm()
