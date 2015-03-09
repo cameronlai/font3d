@@ -7,7 +7,7 @@ import re
 
 message = {
     'none': '', 
-    'fail': 'File creation has failed! Only letters and space are accepted!',
+    'fail': 'Only upper case letters, numbers and space is allowed!!',
 }
 
 # Create your views here.
