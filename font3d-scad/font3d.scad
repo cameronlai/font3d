@@ -17,8 +17,6 @@
 include<dimension.scad>
 include<basic.scad>
 
-font3d("AB", "basic");
-
 module font3d(inputString, fontType)
 {
 	numChar = len(inputString);
@@ -30,7 +28,7 @@ module font3d(inputString, fontType)
 		if (fontType=="basic") basic(inputString[i]);
 		else
 		{
-		   echo("Font type not recognized");
+		   	echo("Font type not recognized");
 		}
 	}
 	// Add support bar

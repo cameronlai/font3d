@@ -14,7 +14,7 @@
 *
 */
 
-include <../dimension.scad>
+include <dimension.scad>
 include <utility.scad>
 
 module basic(char){
