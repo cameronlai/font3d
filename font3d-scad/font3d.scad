@@ -17,10 +17,13 @@
 include<dimension.scad>
 include<basic.scad>
 
+font3d("AB", "basic");
+
 module font3d(inputString, fontType)
 {
+	numChar = len(inputString);
 	// Loop around characters
-	for (i=[0:len(inputString)-1])
+	for (i=[0:numChar-1])
 	{
 		// Pick corresponding font
 		translate([i*xdim,0,0])
@@ -31,5 +34,5 @@ module font3d(inputString, fontType)
 		}
 	}
 	// Add support bar
-	support_bar(len(inputString));
+	if (numChar>1) support_bar(len(inputString));
 }
