@@ -16,7 +16,7 @@
       <div class="row">
 	<h1 class="font-effect-shadow-multiple"> font3d </h1>
 	<p>
-	  font3d is a web app for you to generate a 3D model of text with any text that you inputted.
+	  A web app to generate a 3D STL text model
 	</p>
 	<br>
       </div>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="row">
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped table-condensed">
           <thead>
             <tr>
               <th> Step 1 </th>
@@ -46,23 +46,28 @@
           </thead>
           <tbody>
             <tr>
-              <td>
+              <td class="col-md-2">
                 Enter some text and download the STL file. 
                 <br>
                 <br>
-                Currently, font3d is case insensitive and all text will outputted as upper case.
+                Only upper case letters, numbers and space is allowed.
               </td>
-              <td>
-                Check the STL file and Slice with your favourite G Code processing tool <br>
+              <td class="col-md-2">
+                Check the STL file
+		and Slice with your favourite G Code processing tool
+		<br>
                 (e.g. 
                 <a href="http://slic3r.org/" target="_blank"> Slic3r </a>, 
                 <a href="http://wiki.ultimaker.com/Cura" target="_blank"> Cura </a>
                 )
               </td>
-              <td>
-                Start your print with your 3D printer. If you don't have one yet, here's a few good choices. <br>
+              <td class="col-md-2">
+                Start your print with your 3D printer. 
+		<br>
+		If you don't have one yet, here's a few good choices. 
+		<br>
                 (
-                <a href="https://www.ultimaker.com/" target="_blank"> Ultimaker </a>, 
+                <a href="http://printrbot.com/shop/assembled-simple-metal/" target="_blank"> Printrbot Simple Metal </a>, 
                 <a href="http://cubify.com/" target="_blank"> Cubify </a>,
                 <a href="http://www.makerbot.com/" target="_blank"> Makerbot </a>
                 ) 
@@ -74,7 +79,7 @@
       
       <div class="row">
         <br>
-        The backend of font3d is built with OpenSCAD and the source of the 3D characters are open source, 
+        The backend of font3d is built with OpenSCAD and Django.
 	<br>
 	Source:
         <a href="https://github.com/goldbug/font3d"> https://github.com/goldbug/font3d </a>
