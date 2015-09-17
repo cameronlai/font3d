@@ -23,7 +23,7 @@ Currenly, only one basic font type is supported.
 3. Edit settings.py in your project folder
 
   ``` bash
-  cd ../font3d_PROJECT
+  cd font3d_PROJECT
   nano settings.py
   ```
 
