@@ -21,8 +21,8 @@ class font3dGenerator():
         
         # Generate STL file
         tmpScad.seek(0)
-        for line in tmpScad:
-            print line
+	#for line in tmpScad:
+        #    print line
         tmpStl = NamedTemporaryFile(suffix='.stl')
         cmd = 'openscad -o ' +  tmpStl.name + ' ' + tmpScad.name
         call(cmd, shell=True)
