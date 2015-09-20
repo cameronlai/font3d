@@ -54,7 +54,7 @@ Currenly, only one basic font type is supported.
   python manage.py runserver
   ```
 
-2. Launch web browser, enter correct IP address (Default is 127.0.0.1:8080) and your app is running.
+2. Launch web browser, enter correct IP address (Default is 127.0.0.1:8000) and your app is running.
 
 ## Dependencies
 
