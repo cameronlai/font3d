@@ -43,7 +43,7 @@ Currenly, only one basic font type is supported.
 
   ``` bash
   cd ../
-  sudo python manage.py migrate
+  python manage.py migrate
   ```
 
 ## Running Django app
